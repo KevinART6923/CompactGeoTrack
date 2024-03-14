@@ -15,6 +15,7 @@
 }
 
 :root {
+
   /*================== Colores ================== */
 
   --black: hsl(0, 8%, 3%);
@@ -42,8 +43,6 @@ body {
 
 /*================== Container Principal ================== */
 
-
-
 .container {
   display: flex;
   flex-direction: column;
@@ -52,6 +51,8 @@ body {
   height: 100vh;
   justify-content: center;
 }
+
+/*================== Texto ================== */
 
 .text {
   display: flex;
@@ -74,6 +75,8 @@ body {
   animation:p-entrance 4s ease-in ;
 }
 
+/*================== Cajas ================== */
+
 .boxes {
   display: flex;
   column-gap: 10vw;
@@ -93,12 +96,12 @@ body {
   border-radius: 20px;
   border: solid 2px var(--white);
   background: red;
+  justify-content: center;
 }
 
 .filter {
   filter: blur(5px);
 }
-
 
 .box_1 {
   animation: box-1-entrance 2.3s ease-in;
@@ -124,6 +127,7 @@ body {
   box-shadow: 10px 10px 30px var(--white);
 }
 
+/*================== KeyFrames/Animaciones ================== */
 
 @keyframes box-1-entrance {
     0% {
