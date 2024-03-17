@@ -171,6 +171,13 @@ body {
   color: var(--white);
 }
 
+.box_1 {
+  animation: box-1-entrance 4s ease-in;
+}
+
+.box_2 {
+  animation: box-2-entrance 4s ease-in;
+}
 .boxes_items:first-child:hover{
   transform: translateY(-15px);
 }

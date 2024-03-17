@@ -28,7 +28,7 @@ box_2.addEventListener('mouseout', (e) => {
   box_1.classList.remove('filter');
 })
 
-setTimeout(function () {
-  box_1.classList.add('entrance'); 
-  box_2.classList.add('entrance');
-},7000);
+
+box_1.addEventListener('click', (e) => {
+  document.location.href = "../dist/historial.html"
+}) 

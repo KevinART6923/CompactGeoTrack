@@ -7,15 +7,39 @@
     <!--================== Links ==================-->
 
     <link href="../dist/css/historial.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
 
     <!--================== Tittle ==================-->
 
     <title>Historial Maestros</title>
   </head>
   <body>
+
+    <!--================== NAV ==================-->
+
+    <nav class="nav">
+      <i class="uil uil-bars navOpenBtn"></i>
+      <a href="#" class="logo">CompactGeoTrack</a>
+
+      <ul class="nav-links">
+        <i class="uil uil-times navCloseBtn"></i>
+        <li><a href="../dist/instructores.html" class="link_nav">Home</a></li>
+        <li><a href="#" class="link_nav">Tu Historial</a></li>
+        <li><a href="#" class="link_nav">Historiales Otros</a></li>
+        <li><a href="#" class="link_nav">Porsiacaso</a></li>
+      </ul>
+
+      <i class="uil uil-search search-icon" id="searchIcon"></i>
+      <div class="search-box">
+        <i class="uil uil-search search-icon"></i>
+        <input type="text" placeholder="Search here..." />
+      </div>
+    </nav>
+
     <!--================== Contenedor principal ==================-->
 
     <div class="container">
+
       <!--================== Titulo  ==================-->
 
       <div class="text">
@@ -46,7 +70,7 @@
 
         <div class="htrl-items">
           <div class="htrl-img">
-            <img src="../dist/img/vis_urban.jpg" alt="ejemplo.png" />
+            <img src="../dist/img/vis_urban.jpg" alt="ejemplo.png"/>
           </div>
           <div class="htrl-icons">
             <i>Icono 1</i>
@@ -64,5 +88,7 @@
     </div>
 
     <!--================== Scripts ==================-->
+
+    <script src="../dist/js/historial.js" defer></script>
   </body>
 </html>
