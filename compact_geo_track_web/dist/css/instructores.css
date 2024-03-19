@@ -1,5 +1,5 @@
 /*-----------------------------------*\
- * #Code Created by: Kevin - 2024
+ * #Code Created by ©: Kevin - 2024
 \*-----------------------------------*/
 
 /*================== Imports ================== */
@@ -20,6 +20,7 @@
 
   --black: hsl(0, 8%, 3%);
   --white: hsl(0, 57%, 97%);
+  --text-color:#8f2c24;
   --selection-background-: hsl(0, 8%, 29%);
   --selection-color-: hsl(0, 18%, 81%);
   --bg: #000000;
