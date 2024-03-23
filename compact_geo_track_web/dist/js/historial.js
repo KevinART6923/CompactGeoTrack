@@ -20,3 +20,16 @@ navOpenBtn.addEventListener("click", () => {
 navCloseBtn.addEventListener("click", () => {
   nav.classList.remove("openNav");
 });
+
+
+const editar = document.querySelectorAll('.fa-pen-to-square');
+const eliminar = document.querySelectorAll('.fa-trash');
+
+editar.forEach(elemento => {
+  elemento.setAttribute('title', 'Editar Medición');
+});
+
+eliminar.forEach(elemento => {
+  elemento.setAttribute('title', 'Eliminar Medición');
+  elemento.style.color = '#b3150a';
+});

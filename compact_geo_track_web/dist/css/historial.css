@@ -27,8 +27,8 @@
   --text-color:#8f2c24;
   --background: rgba(128, 128, 128, 0.452);
   --transparent: transparent;
-  --selection-background-: hsl(0, 8%, 29%);
-  --selection-color-: hsl(0, 18%, 81%);
+  --selection-background-: hsla(4, 60%, 35%, 0.664);
+  --selection-color-: hsl(0, 30%, 92%);
 
     /*================== Fonts ================== */
 
@@ -158,7 +158,7 @@ body {
   width: 100%;
   padding: 15px 200px;
   background: var(--background);
-  
+  z-index: 2;
 }
 .nav,
 .nav .nav-links {
@@ -187,7 +187,7 @@ body {
   font-family: var(--font-NTR);
   font-weight: 600;
   font-size: 1.2rem;
-  transition: all .5s ease;
+  transition: all 1s ease;
 }
 
 .link_nav:hover {
@@ -196,7 +196,7 @@ body {
 }
 
 .nav .nav-links a {
-  transition: all 0.2s linear;
+  transition: all .5s linear;
 }
 .nav.openSearch .nav-links a {
   opacity: 0;
@@ -231,7 +231,7 @@ body {
   left: 15px;
   color: var(--text-color);
   transform: translateY(-50%);
-  transition: all .5s ease;
+  transition: all 1s ease;
 }
 .search-box input {
   height: 100%;
@@ -255,7 +255,7 @@ body {
 }
 
 .uil-search {
-  transition: all .5s ease;
+  transition: all 1s ease;
 }
 
 .uil-search:hover {
@@ -312,7 +312,6 @@ body {
     border-right: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 20px;
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
- 
 }
 
 
@@ -338,16 +337,15 @@ body {
 .icons {
   cursor: pointer;
   font-size: 20px;
+  transition: transform .5s ease-in;
 }
 
 .icons:first-child {
   color: hsl(0, 7%, 39%);
 }
-
-.icons:nth-child(2) {
-  color: #b3150a;
-}
-
+.icons:hover {
+  transform: translateY(-3px);
+} 
 .htrl-img > i {
   width: 20px;
 }
@@ -362,22 +360,82 @@ body {
   color: var(--text-color);
 }
 
-
 .htrl-button {
   grid-area: button;
   display: flex;
 }
 
-.htrl-button button {
+
+
+#btn {
+  padding: 6px 8px;
+  overflow: hidden;
+  position: relative;
+  border: none;
+  outline: none;
+  background: var(--white);
+  color: var(--text-color);
+  cursor: pointer;
+  font-size: 1.25em;
+  font-weight: 500;
   min-width: 200px;
   min-height: 40px;
+  padding: 15px 20px;
+  border-radius: 5px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 2s ease-in;
+}
+#btn::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    -120deg,
+    transparent,
+    var(--white),
+    transparent
+  );
+  transform: translateX(-100%);
+  transition: 2s;
+}
+#btn:hover::before {
+  transform: translateX(100%);
+}
+#btn:hover {
   background: var(--transparent);
-  outline: none;
-  border: solid 2px black;
-  background: green;
+  color: var(--white);
+  box-shadow: 0 0 20px 10px var(--white);
+  text-shadow: 1px 1px 1px var(--text-color);
+}
+#btn span {
+  transition: transform 1.7s ease-in;
 }
 
+#btn:hover span {
+  transform: translateX(-10%);
+}
 
+#btn img {
+  width: 30px;
+  height: 30px; 
+  right: 0;
+  opacity: 0;
+  transform: translateX(90%);
+  transition: 2s;
+
+  position: absolute;
+}
+
+#btn:hover img {
+  transform: translateX(-50%);
+  opacity: 1;
+}
 
 
 /*================== KeyFrames/animaciones ================== */
