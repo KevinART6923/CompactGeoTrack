@@ -66,13 +66,24 @@ function redirectToInstructores() {
   const passwordHidden = document.querySelector(".password-hidden").value;
   const passwordRevealed = document.querySelector('.password-revealed').value;
 
-  if (username === "artunduaga00@gmail.com" && (passwordHidden === "12345678" || passwordRevealed === '12345678')) {
-    window.location.href = "../dist/instructores.html";
-    return false;
-  } else {
-    alert("Credenciales incorrectas. Por favor, inténtalo de nuevo.");
-    return false;
-  }
+  const alertEl = document.getElementById('error-message');
+  const alertMsgEl = alertEl.querySelector("div");
+
+    if (username === "artunduaga00@gmail.com" && (passwordHidden === "12345678" || passwordRevealed === '12345678')) {
+      window.location.href = "../dist/instructores.html";
+    } else {
+      alertEl.classList.add("show-me");
+    }
+  alertEl.addEventListener("click", (e) => {
+    if (e.target != alertMsgEl) {
+      alertEl.classList.remove("show-me");
+    }
+  });
+  
+  return false;
 }
+
+
+
 
 

@@ -44,6 +44,10 @@ a {
   color: var(--selection-color-);
 }
 
+body {
+  animation: fadeIn 5s ease forwards;
+}
+
 /*================== Contenedor principal ================== */
 
 section {
@@ -515,6 +519,15 @@ section .boy {
 
 /*================== Keyframes/animations ================== */
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @keyframes animate {
   0% {
     opacity: 0;
@@ -556,3 +569,66 @@ section .boy {
     transform: translateX(calc(100% + 100vw)) rotateY(180deg);
   }
 }
+
+
+#error-message {
+  position: fixed; 
+  z-index: 1;
+	inset: 0;
+	margin: auto;
+  background-color: var(--selection-background-);
+	backdrop-filter: blur(4px);
+	opacity: 0;
+	scale: 0%;
+	transition: 300ms ease-in-out;
+	display:grid;
+	place-content: center;
+	pointer-events: none;
+	
+	& > div{
+		position: relative;
+		transition: 500ms ease-in-out 300ms;
+		translate: 0 1000px;
+		
+		opacity: 0;
+		background: var(--white);
+		padding: .75rem 2rem;
+		border-radius: 10px;
+		color: var(--text-color);
+		border:1px solid var(--text-color);
+		display: flex;
+		align-items: center;
+		gap: .75rem;
+		& > svg {
+			width: 1.5rem;
+		}
+	}
+  
+	
+	&.show-me{
+		opacity: 100%;
+		scale: 100%;
+		pointer-events: auto;
+	}	
+	&.show-me > div{
+		translate: 0;
+		opacity: 100%;
+	}
+	& button{
+		border: none;
+		outline: none;
+background: transparent;
+		position: absolute;
+		top: -1rem;
+		right: -1rem;
+		color: var(--text-color);
+		font-size: 1.5rem;
+		cursor: pointer;
+		transition: scale 300ms ease-in-out;
+	}
+		& button:hover,
+		& button:focus-visible{
+			scale: 125%;
+	}
+}
+

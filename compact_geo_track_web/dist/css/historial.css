@@ -59,7 +59,9 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   backdrop-filter: saturate(200% );
+  animation: fadeIn 5s ease forwards;
 }
+
 
 
 
@@ -468,6 +470,15 @@ body {
 }
 
 /*================== Responsive ================== */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 @media screen and (max-width: 1160px) {
   .nav {

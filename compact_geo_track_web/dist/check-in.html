@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!--================== Links ==================-->
+
+    <link rel="stylesheet" href="../dist/css/check-in.css" />
+    <link href="../dist/img/icon-page.png" rel="icon" />
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/b6e4dcd8b5.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/check-in.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!--================== Titulos ==================-->
+
+    <title>Login CompactGeoTrack</title>
+  </head>
+  <body>
+    <!--================== Container Principal  ==================-->
+
+    <section class="section">
+      <!--================== Hojas ==================-->
+
+      <div class="leaves">
+        <div class="set">
+          <div><img src="../dist/img/leaf_01.png" /></div>
+          <div><img src="../dist/img/leaf_02.png" /></div>
+          <div><img src="../dist/img/leaf_03.png" /></div>
+          <div><img src="../dist/img/leaf_04.png" /></div>
+          <div><img src="../dist/img/leaf_01.png" /></div>
+          <div><img src="../dist/img/leaf_02.png" /></div>
+          <div><img src="../dist/img/leaf_03.png" /></div>
+          <div><img src="../dist/img/leaf_04.png" /></div>
+        </div>
+      </div>
+
+      <!--================== Imagenes fondo ==================-->
+
+      <img src="../dist/img/bg.jpg" class="bg" />
+      <img src="../dist/img/bicycle-skeleton.gif" class="boy" />
+      <img src="../dist/img/trees.png" class="trees" />
+
+      <form class="login">
+        <h2>Registrarse</h2>
+        <div class="inputBox">
+            <input type="email" placeholder="Email" id="username" required maxlength="42" />
+            <div class="inputBox">
+                <ul>
+                    <li>
+                        <label for="password"></label>
+                        <input type="password" id="password" name="password" placeholder="Password" required />
+                        <i class="fa-solid fa-eye pswd_show_2" id="fa-solid-2"></i>
+                    </li>
+                    <div class="pswd_info">
+                        <h4 class="pswd_reqs">
+                            La contraseña debe cumplir con los siguientes requisitos:
+                        </h4>
+                        <ul>
+                            <li id="letter" class="invalid"><strong>Una letra minúscula</strong></li>
+                            <li id="capital" class="invalid"><strong>Una letra mayúscula</strong></li>
+                            <li id="number" class="invalid"><strong>Un número</strong></li>
+                            <li id="special" class="invalid"><strong>Un carácter especial</strong></li>
+                            <li id="length" class="invalid"><strong>8 caracteres</strong></li>
+                        </ul>
+                    </div>
+                    <li>
+                        <input type="password" id="password-verify" name="password-verify" placeholder="Verify Password" />
+                        <i class="fa-solid fa-eye pswd_show" id="fa-solid"></i>
+                    </li>
+                </ul>
+                <div class="inputBox">
+                    <button type="submit" id="btn">Registrarse</button>
+                </div>
+                <!--================== Iniciar Sesión ==================-->
+                <div class="group">
+                    <span>¿Ya tienes cuenta? </span>
+                    <a href="../dist/login.html">Iniciar Sesion </a>
+                </div>
+            </div>
+        </div>
+      </form>    
+    </section>
+  </body>
+</html>
