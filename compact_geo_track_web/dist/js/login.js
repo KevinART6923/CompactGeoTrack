@@ -61,28 +61,42 @@ timeline.play();
 
 //==================== Parametros de Inicio ====================\\
 
-function redirectToInstructores() {
-  const username = document.getElementById("username").value;
-  const passwordHidden = document.querySelector(".password-hidden").value;
-  const passwordRevealed = document.querySelector('.password-revealed').value;
+// function redirectToInstructores() {
+//   const username = document.getElementById("email").value;
+//   const passwordHidden = document.querySelector(".password-hidden").value;
+//   const passwordRevealed = document.querySelector('.password-revealed').value;
 
-  const alertEl = document.getElementById('error-message');
-  const alertMsgEl = alertEl.querySelector("div");
+//   const alertEl = document.getElementById('error-message');
+//   const alertMsgEl = alertEl.querySelector("div");
 
-    if (username === "artunduaga00@gmail.com" && (passwordHidden === "12345678" || passwordRevealed === '12345678')) {
-      window.location.href = "../dist/instructores.html";
-    } else {
-      alertEl.classList.add("show-me");
-    }
-  alertEl.addEventListener("click", (e) => {
-    if (e.target != alertMsgEl) {
-      alertEl.classList.remove("show-me");
-    }
-  });
+//     if (username === "artunduaga00@gmail.com" && (passwordHidden === "12345678" || passwordRevealed === '12345678')) {
+//       window.location.href = "../dist/instructores.html";
+//     } else {
+//       alertEl.classList.add("show-me");
+//     }
+//   alertEl.addEventListener("click", (e) => {
+//     if (e.target != alertMsgEl) {
+//       alertEl.classList.remove("show-me");
+//     }
+//   });
   
-  return false;
-}
+//   return false;
+// }
 
+
+
+import { ManageAccount } from './conexion.js';
+
+document.getElementById("formulario-sesion").addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  const account = new ManageAccount();
+  account.authenticate(email, password);
+
+});
 
 
 

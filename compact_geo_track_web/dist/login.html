@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="../dist/css/login.css" />
     <link href="../dist/img/icon-page.png" rel="icon" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!--================== Titulos ==================-->
 
@@ -39,15 +40,16 @@
 
       <!--================== Login ==================-->
 
-      <form class="login" onsubmit="return redirectToInstructores()">
+      <form class="login" onsubmit="return redirectToInstructores()" id="formulario-sesion">
         <h2>Iniciar Sesion</h2>
         <div class="inputBox">
           <input
             type="email"
             placeholder="Email"
-            id="username"
             required
             maxlength="42"
+            id="email" 
+            name="email"
           />
 
           <div class="inputBox">
@@ -69,6 +71,8 @@
                   required
                   minlength="6"
                   maxlength="20"
+                  id="password" 
+                  name="password"
                 />
               </div>
               <div class="revealed">
@@ -84,6 +88,8 @@
                   required
                   minlength="6"
                   maxlength="20"
+                  id="password" 
+                  name="password"
                 />
               </div>
               <div class="button">
@@ -112,7 +118,7 @@
               </div>
             </div>
             <div class="inputBox">
-              <button type="submit" id="btn">Iniciar Sesión</button>
+              <button type="submit" id="btn-login">Iniciar Sesión</button>
             </div>
             <div class="group">
               <a href="#">Olvide mi password</a>
@@ -144,6 +150,8 @@
     </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
-    <script src="./js/login.js"></script>
+    <script src="./js/conexion.js" type="module"></script>
+    <script type="module" src="./js/login.js"></script>
+
   </body>
 </html>

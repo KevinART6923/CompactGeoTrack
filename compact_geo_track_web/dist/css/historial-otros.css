@@ -296,14 +296,13 @@ body {
   grid-template-columns: 45% 55%;
   grid-template-rows: auto;
   grid-template-areas: 
-  'img icons'
+  'img text'
   'img text'
   'img button';
   outline: solid var(--white) 2px;
   min-width: 500px;
   align-content: center;
   padding: 20px;
-  row-gap: 20px;
   align-items: center;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.25);
@@ -354,12 +353,16 @@ body {
 .htrl-text  {
   grid-area: text;
   font-family: var(--font-texto);
-} 
-.htrl-text  { 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: -20px;
   font-weight: lighter;
   font-size: 1rem;
   color: var(--text-color);
-}
+
+} 
 
 .htrl-button {
   grid-area: button;
@@ -381,7 +384,6 @@ body {
   font-weight: 500;
   min-width: 200px;
   min-height: 40px;
-  padding: 15px 20px;
   border-radius: 5px;
   height: 40px;
   display: flex;

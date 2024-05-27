@@ -12,7 +12,6 @@
       src="https://kit.fontawesome.com/b6e4dcd8b5.js"
       crossorigin="anonymous"
     ></script>
-    <script src="./js/check-in.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!--================== Titulos ==================-->
@@ -41,15 +40,15 @@
       <!--================== Imagenes fondo ==================-->
 
       <img src="../dist/img/bg.jpg" class="bg" />
-      <img src="../dist/img/bicycle-skeleton.gif" class="boy" />
+      <img src="../dist/img/cicla-check-in.gif" class="boy" />
       <img src="../dist/img/trees.png" class="trees" />
 
-      <!--================== Login ==================-->
+      <!--================== check in ==================-->
 
-      <form class="login">
+      <form class="check-in" id="formulario-registrarse">
         <h2>Registrarse</h2>
         <div class="inputBox">
-            <input type="email" placeholder="Email" id="username" required maxlength="42" />
+            <input type="email" placeholder="Email" id="email" name="email" required maxlength="42" />
             <div class="inputBox">
       <!--================== Select rol ==================-->
       <!-- Copyright (c) 2024 by Husam Alruyabe (www.HUSAMUI.com) -->
@@ -95,12 +94,13 @@
                 </div>
                 <!--================== Iniciar Sesión ==================-->
                 <div class="group">
-                    <span>¿Ya tienes cuenta? </span>
-                    <a href="../dist/login.html">Iniciar Sesion </a>
+                    <a href="../dist/login.html">¿Ya tienes cuenta? </a>
                 </div>
             </div>
         </div>
       </form>    
     </section>
+    <script type="module" src="./js/conexion.js"></script>
+    <script type="module" src="./js/check-in.js"></script>
   </body>
 </html>

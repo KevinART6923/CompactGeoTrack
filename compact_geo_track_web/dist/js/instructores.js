@@ -32,3 +32,7 @@ box_2.addEventListener('mouseout', (e) => {
 box_1.addEventListener('click', (e) => {
   document.location.href = "../dist/historial.html"
 }) 
+
+box_2.addEventListener('click', (e) => {
+  document.location.href = "../dist/historial-otros.html"
+}) 

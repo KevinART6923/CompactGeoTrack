@@ -159,7 +159,7 @@ section .boy {
   text-shadow: 1px 1px 1px var(--text-color);
 }
 
-#btn {
+#btn-login {
   padding: 8px 10px;
   overflow: hidden;
   position: relative;
@@ -180,7 +180,7 @@ section .boy {
   align-items: center;
   transition: all 0.5s ease-in;
 }
-#btn::before {
+#btn-login::before {
   position: absolute;
   content: "";
   top: 0;
@@ -196,10 +196,10 @@ section .boy {
   transform: translateX(-100%);
   transition: 2s;
 }
-#btn:hover::before {
+#btn-login:hover::before {
   transform: translateX(100%);
 }
-#btn:hover {
+#btn-login:hover {
   background: var(--white);
   color: var(--text-color);
   box-shadow: 0 0 20px 10px hsl(4, 60%, 35%);

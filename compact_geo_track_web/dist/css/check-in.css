@@ -89,7 +89,7 @@ body {
 }
 .section .boy {
   position: fixed;
-  scale: 1.4;
+  scale: 1;
   pointer-events: none;
   animation: animateBoy 15s linear infinite;
   filter: contrast(80%);
@@ -97,7 +97,7 @@ body {
 
 /*================== Login ================== */
 
-.login {
+.check-in {
   position: relative;
   padding: 60px;
   background: rgba(255, 255, 255, 0.25);
@@ -114,7 +114,7 @@ body {
   font-family: var(--font-NTR);
 }
 
-.login h2 {
+.check-in h2 {
   position: relative;
   width: 100%;
   text-align: center;
@@ -124,7 +124,7 @@ body {
   margin-bottom: 10px;
 }
 
-.login .inputBox input {
+.check-in .inputBox input {
   position: relative;
   width: 100%;
   padding: 15px 20px;
@@ -137,7 +137,7 @@ body {
   margin-bottom: 30px;
   height: 68px;
 }
-.login .inputBox select {
+.check-in .inputBox select {
   position: relative;
   width: 100%;
   padding: 15px 20px;
@@ -162,7 +162,7 @@ body {
   background-color: var(--text-color);
   color: white;
 }
-.login .inputBox select:focus {
+.check-in .inputBox select:focus {
   outline: solid 2px var(--text-color);
 }
 
@@ -175,30 +175,30 @@ select:focus:hover {
   color: var(--text-color);
 }
 
-.login .inputBox input:focus {
+.check-in .inputBox input:focus {
   outline: solid 2px var(--text-color);
 }
-.login .inputBox ::placeholder {
+.check-in .inputBox ::placeholder {
   color: var(--text-color);
 }
 
 .blanco {
   color: var(--white);
 }
-.login .group {
+.check-in .group {
   display: flex;
   justify-content: space-evenly;
 }
 
-.login .group a,
-.login .group span {
+.check-in .group a,
+.check-in .group span {
   font-size: 1.25em;
   color: var(--text-color);
   font-weight: 500;
   transition: 0.5s;
 }
 
-.login .group a:hover {
+.check-in .group a:hover {
   color: var(--white);
   transform: scale(1.1);
   text-shadow: 1px 1px 1px var(--text-color);

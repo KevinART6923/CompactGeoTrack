@@ -2,10 +2,13 @@
  * #Code Created by: Kevin - 2024
 \*-----------------------------------*/
 
+import { ManageAccount } from './conexion.js';
+
 //==================== Parametros de Contraseña ====================\\
 
 let password = [];
 let password2 = [];
+let selectValue;
 
 $(document).ready(function () {
   password = $('#password');
@@ -102,7 +105,7 @@ $(document).ready(function () {
   //==================== Funcion para ver el menu del select ====================\\
 
   $(document).ready(function () {
-    let selectedRole = ""; // Variable para almacenar el rol seleccionado
+    let selectedRole = "";
   
     $(".dropdown").click(function () {
       $(".menu").toggleClass("showMenu");
@@ -113,31 +116,59 @@ $(document).ready(function () {
       selectedRole = $(this).data("value"); 
       $(".dropdown > p").html($(this).html());
       $(".menu").removeClass("showMenu");
-      console.log("Rol seleccionado:", selectedRole); 
+      selectValue = selectedRole;
     });
   });
-  
-  
   
 
 //==================== Parametros para enviar el registro ====================\\
 
-function redirectToLogin(e) {
+function isValidEmail(email) {
+  // Expresión regular para validar el formato del correo electrónico
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+function handleFormSubmit(e) {
   e.preventDefault();
 
-  const email = document.getElementById("username").value.toLowerCase();
+  const email = document.getElementById("email").value.toLowerCase();
   const password = document.getElementById('password').value;
   const password2 = document.getElementById('password-verify').value;
+  const role = selectValue;
 
   //==================== Verificar si el correo electrónico es incorrecto ====================\\
 
-  if (email !== "artunduaga00@gmail.com") {
+  
+  if (!role) {
     Swal.fire({
       icon: "error",
       title: "Oops...",
-      text: "¡Email incorrecto!"
+      text: "¡Por favor selecciona un rol!"
     });
     return;
+  }
+
+  if (!isValidEmail(email)) {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "¡Por favor ingresa un correo electrónico válido!"
+    });
+    return;
+  } else if (!email.endsWith(".com")) {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "¡El correo electrónico debe terminar en '.com'!"
+    });
+    return;
+  }
+
+
+  function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
   }
 
   //==================== Verificar si las contraseñas no coinciden ====================\\
@@ -162,24 +193,20 @@ function redirectToLogin(e) {
     return;
   }
 
-  const selectElement = document.getElementById('rolSelect');
-  let select;
-
-selectElement.addEventListener('change', function () {
-  const selectedValue = this.value;
-  select = selectedValue;
-});
 
 
-  //==================== Si esta todo bien lo redirige al login ====================\\
+    const account = new ManageAccount();
+  account.register(email, password, role);
 
-  window.location.href = "../dist/login.html";
+
+
 }
 
 //==================== Asociar la función redirectToLogin al evento submit del formulario ====================\\
 
 $(document).ready(function () {
-  $('.login').submit(redirectToLogin);
+
+  $('.check-in').submit(handleFormSubmit);
 });
 
 
