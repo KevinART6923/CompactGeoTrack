@@ -72,7 +72,7 @@ export class ManageAccount {
             text: "Serás redirigido a la página de inicio de sesión."
           });
           setTimeout(() => {
-            window.location.href = "./login.html";
+            window.location.href = "./index.html";
           }, 3000); 
         })
         .catch((error) => {
@@ -135,7 +135,7 @@ export class ManageAccount {
                   break;
                 default:
                   alert('No funciono');
-                  window.location.href = "./login.html";
+                  window.location.href = "./index.html";
                   break;
               }
             } else {
@@ -177,10 +177,10 @@ export class ManageAccount {
   signOut() {
     signOut(auth)
       .then(() => {
-        window.location.href = "login.html";
-        history.pushState(null, null, 'login.html');
+        window.location.href = "index.html";
+        history.pushState(null, null, 'index.html');
         window.addEventListener('popstate', function (event) {
-          history.pushState(null, null, 'login.html');
+          history.pushState(null, null, 'index.html');
         });
       })
       .catch((error) => {

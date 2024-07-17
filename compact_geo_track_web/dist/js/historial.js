@@ -574,10 +574,10 @@ document.getElementById("email-user").addEventListener("click", (e) => {
                       popup: 'animate__animated animate__fadeOut'
                     }
                   }).then(() => {
-                    window.location.href = "./login.html";
-                    history.pushState(null, null, 'login.html');
+                    window.location.href = "./index.html";
+                    history.pushState(null, null, 'index.html');
                     window.addEventListener('popstate', function (event) {
-                      history.pushState(null, null, 'login.html');
+                      history.pushState(null, null, 'index.html');
                     });
                   });
                 })
@@ -677,10 +677,10 @@ document.getElementById("delete-account").addEventListener("click", (e) => {
                 text: 'Tu cuenta ha sido eliminada exitosamente.',
                 confirmButtonColor: '#8f2c24'
               }).then(() => {
-                window.location.href = "./login.html";
-                history.pushState(null, null, 'login.html');
+                window.location.href = "./index.html";
+                history.pushState(null, null, 'index.html');
                 window.addEventListener('popstate', function (event) {
-                  history.pushState(null, null, 'login.html');
+                  history.pushState(null, null, 'index.html');
                 });
               });
             })
