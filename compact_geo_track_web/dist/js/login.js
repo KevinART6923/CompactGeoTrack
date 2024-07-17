@@ -85,7 +85,7 @@ timeline.play();
 
 
 
-import { ManageAccount } from './conexion.js';
+import { ManageAccount } from '../../examples/conexion.js';
 
 document.getElementById("formulario-sesion").addEventListener("submit", (e) => {
   e.preventDefault();

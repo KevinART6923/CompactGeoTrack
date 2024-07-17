@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://bootswatch.com/5/yeti/bootstrap.min.css">
+  <title>Add Task</title>
+</head>
+<body class="bg-dark">
+
+  <div class="container p-4">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h1 class="h4">Add Task</h1>
+
+            <form id="task-form">
+
+              <label for="img">Img</label>
+              <input
+  type="file"
+  id="task-img" 
+  class="form-control mb-3"
+  placeholder="Img"
+  accept="image/*"
+/>
+
+<label for="title-task">Title task:</label>
+              <input
+                type="text"
+                id="task-title"
+                class="form-control mb-3"
+                placeholder="title"
+              />
+              <label for="location">Location:</label>
+              <input
+                type="text"
+                id="task-location"
+                class="form-control mb-3"
+                placeholder="Location"
+              />
+
+              <label for="soil-resistance">Soil Resistance:</label>
+              <input
+                type="number"
+                id="task-soil-resistance"
+                class="form-control mb-3"
+                placeholder="Soil Resistance"
+              />
+
+              <label for="penetration-depth">Penetration Depth:</label>
+              <input
+                type="text"
+                id="task-penetration-depth"
+                class="form-control mb-3"
+                placeholder="Penetration Depth"
+              />
+
+              <label for="coordinates">Coordinates:</label>
+              <input
+                type="text"
+                id="task-coordinates"
+                class="form-control mb-3"
+                placeholder="Coordinates"
+              />
+
+              <label for="date-time">Date and Time:</label>
+              <input
+                type="datetime-local"
+                id="task-date-time"
+                class="form-control mb-3"
+              />
+
+              <label for="additional-details">Additional Details:</label>
+              <textarea
+                id="task-additional-details"
+                rows="3"
+                class="form-control mb-3"
+                placeholder="Additional Details"
+              ></textarea>
+
+              <button class="btn btn-primary" id="btn-task-form">Save</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- Tasks List -->
+      <div class="col-md-6" id="tasks-container"></div>
+    </div>
+  </div>
+
+  <script src="conexion.js" type="module"></script>
+  <script src="script.js" type="module"></script>
+</body>
+</html>

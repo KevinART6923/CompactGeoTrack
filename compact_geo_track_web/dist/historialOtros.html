@@ -6,22 +6,24 @@
 
     <!--================== Links ==================-->
 
-    <link href="../dist/css/historial-otros.css" rel="stylesheet" type="text/css" />
+    <link href="../dist/css/historial.css" rel="stylesheet" type="text/css" />
     <link
       rel="stylesheet"
       href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
     />
     <link href="../dist/img/icon-page.png" rel="icon" />
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="../dist/node_modules/lightbox2/dist/css/lightbox.min.css">
+    
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+
+
 
     <!--================== Tittle ==================-->
 
-    <title>Historial Otros</title>
+    <title>Historial Maestros</title>
   </head>
   <body>
     <!--================== Contenedor Principal ==================-->
@@ -81,47 +83,69 @@
           
           <!--================== Registros ==================-->
 
-          <div class="htrl-items">
-            <a class="htrl-img example-image-link" href="../dist/img/vis_urban.jpg" data-lightbox="example-1">
-              <img src="../dist/img/vis_urban.jpg" alt="ejemplo.png" />
-            </a>
-            <div class="htrl-text">
-              <h1>Medición 1</h1>
-              <p>27,49 - 55,47</p>
-            </div>
-            <div class="htrl-button">
-              <button type="submit" id="btn" class="button-htrl"><span>Ver Detalles</span><img src="../dist/img/detalles.png" referrerpolicy="icono detalles"></button>
+     
+          <div id="tasks-container"></div>
+
+
+          <div class="pen-wrapper">
+            <div class="pen-wrapper__inner">
+              <nav class="nav-user">
+                <input type="checkbox" id="menu-button" class="menu-button__input" />
+                <label for="menu-button" class="menu-button">
+                  <span class="menu-button__icon">
+                    <span class="menu-button__icon-strip"></span>
+                  </span>
+                </label>
+                <div class="nav__inner">
+                  <figure class="nav__avatar">
+                    <img src="./img/avatar.png" alt="" class="img-user" />
+                  </figure>
+                  <ul class="nav-list">
+                    <li class="nav-list__item">
+                      <a href="#" class="nav-list__url" id="email-user">
+                        <span class="icon nav-list__icon" title="Mis datos">
+                          <i class="fa-solid fa-file-lines"></i>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="nav-list__item">
+                      <a href="#" class="nav-list__url" id="about">
+                        <span class="icon nav-list__icon" title="Sobre nosotros">
+                          <i class="fa-solid fa-people-group"></i>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="nav-list__item">
+                      <a href="#" class="nav-list__url">
+                        <span class="icon nav-list__icon" title="Envianos un mensaje" id="message">
+                          <i class="fa-solid fa-envelope-open-text"></i>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="nav-list__item">
+                      <a href="#" class="nav-list__url" id="delete-account">
+                        <span class="icon nav-list__icon" title="Eliminar Cuenta">
+                          <i class="fa-solid fa-user-slash"></i>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="nav-list__item">
+                      <a href="#" class="nav-list__url" id="logout-button">
+                        <span class="icon nav-list__icon" title="Cerrar Sesión">
+                          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
             </div>
           </div>
 
-          <div class="htrl-items">
-            <a class="htrl-img example-image-link" href="../dist/img/vis_urban.jpg" data-lightbox="example-1">
-              <img src="../dist/img/vis_urban.jpg" alt="ejemplo.png" />
-            </a>
-            <div class="htrl-text">
-              <h1>Medición 2</h1>
-              <p>11,90 - 59,97</p>
-            </div>
-            <div class="htrl-button">
-              <button type="submit" id="btn" class="button-htrl"><span>Ver Detalles</span> <img src="../dist/img/detalles.png" referrerpolicy="icono detalles"></button>
-            </div>
-          </div>
-  
-          <div class="htrl-items">
-            <a class="htrl-img example-image-link" href="../dist/img/vis_urban.jpg" data-lightbox="example-1">
-              <img src="../dist/img/vis_urban.jpg" alt="ejemplo.png" />
-            </a>
-            <div class="htrl-text">
-              <h1>Medición 3</h1>
-              <p>45,70 - 11.67</p>
-            </div>
-            <div class="htrl-button">
-              <button type="submit" id="btn" class="button-htrl"><span>Ver Detalles</span> <img src="../dist/img/detalles.png" referrerpolicy="icono detalles"></button>
-            </div>
-          </div>
         </section>
       </div>
     </div>
+    
     
     <!--================== Scripts ==================-->
 
@@ -129,7 +153,7 @@
       src="https://kit.fontawesome.com/b6e4dcd8b5.js"
       crossorigin="anonymous"
     ></script>
-    <script src="../dist/js/historial.js"></script>
+    <script src="../dist/js/historial.js" type="module"></script>
     <script src="../dist/node_modules/lightbox2/dist/js/lightbox-plus-jquery.min.js"></script>
   </body>
 </html>

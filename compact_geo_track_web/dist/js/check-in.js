@@ -2,7 +2,7 @@
  * #Code Created by: Kevin - 2024
 \*-----------------------------------*/
 
-import { ManageAccount } from './conexion.js';
+import { ManageAccount } from '../../examples/conexion.js';
 
 //==================== Parametros de Contraseña ====================\\
 
@@ -131,7 +131,7 @@ function isValidEmail(email) {
 
 function handleFormSubmit(e) {
   e.preventDefault();
-
+  const nombre = document.getElementById('nombre').value;
   const email = document.getElementById("email").value.toLowerCase();
   const password = document.getElementById('password').value;
   const password2 = document.getElementById('password-verify').value;
@@ -196,7 +196,7 @@ function handleFormSubmit(e) {
 
 
     const account = new ManageAccount();
-  account.register(email, password, role);
+  account.register(nombre, email, password, role);
 
 
 

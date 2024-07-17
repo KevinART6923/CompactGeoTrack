@@ -34,5 +34,5 @@ box_1.addEventListener('click', (e) => {
 }) 
 
 box_2.addEventListener('click', (e) => {
-  document.location.href = "../dist/historial-otros.html"
+  document.location.href = "../dist/historial-otros-Ins.html"
 }) 
