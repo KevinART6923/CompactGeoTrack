@@ -90,7 +90,7 @@ async function renderRecords(querySnapshot) {
       },
       backdrop: `
         hsla(5, 100%, 100%, 0.5)
-        url("../dist/img/gato.gif")
+        url("../img/gato.gif")
         left center
         no-repeat
       `
@@ -225,7 +225,7 @@ async function renderRecords(querySnapshot) {
         confirmButtonText: "Si, borrarlo! <i class='fa-regular fa-trash-can'></i>",
         backdrop: `
           hsla(5, 100%, 100%, 0.5)
-          url("../dist/img/gato.gif")
+          url("../img/gato.gif")
           left center
           no-repeat
         `
@@ -247,7 +247,7 @@ async function renderRecords(querySnapshot) {
               confirmButtonColor: "#8f2c24",
               backdrop: `
                 hsla(5, 100%, 100%, 0.5)
-                url("../dist/img/gato.gif")
+                url("../img/gato.gif")
                 left center
                 no-repeat
               `
@@ -267,7 +267,7 @@ async function renderRecords(querySnapshot) {
               confirmButtonColor: "#8f2c24",
               backdrop: `
                 hsla(5, 100%, 100%, 0.5)
-                url("../dist/img/gato.gif")
+                url("../img/gato.gif")
                 left center
                 no-repeat
               `
@@ -324,10 +324,10 @@ async function renderRecords(querySnapshot) {
             confirmButtonText: `Aceptar <i class="fa-solid fa-user-check"></i>`,
             confirmButtonClass: 'btn-custom',
             confirmButtonColor: '#8f2c24',
-            background: "#fff url(../dist/img/fondo.jpg) no-repeat center ",
+            background: "#fff url(../img/fondo.jpg) no-repeat center ",
             backdrop: `
           hsla(5, 100%, 100%, 0.5)
-            url("../dist/img/gato.gif")
+            url("../img/gato.gif")
             left center
             no-repeat
           `
@@ -376,7 +376,7 @@ async function renderRecords(querySnapshot) {
                   },
                   backdrop: `
                     hsla(5, 100%, 100%, 0.5)
-                      url("../dist/img/gato.gif")
+                      url("../img/gato.gif")
                       left
                       center
                       no-repeat
@@ -397,7 +397,7 @@ async function renderRecords(querySnapshot) {
                   },
                   backdrop: `
                     hsla(5, 100%, 100%, 0.5)
-                      url("../dist/img/gato.gif")
+                      url("../img/gato.gif")
                       left center
                       no-repeat
                     `
@@ -416,7 +416,7 @@ async function renderRecords(querySnapshot) {
                 },
                 backdrop: `
                   hsla(5, 100%, 100%, 0.5)
-                    url("../dist/img/gato.gif")
+                    url("../img/gato.gif")
                     left center
                     no-repeat
                   `
