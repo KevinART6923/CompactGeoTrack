@@ -2,7 +2,7 @@
  * #Code Created by: Kevin - 2024
 \*-----------------------------------*/
 
-import { ManageAccount } from '../../examples/conexion.js';
+import { ManageAccount } from './conexion.js';
 
 //==================== Parametros de Contraseña ====================\\
 

@@ -1,7 +1,7 @@
 import { deleteDoc, doc, updateDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
-import { db } from "../../examples/conexion.js";
-import { onGetRecords, getRecord, updateRecord, uploadImage, deleteRecord, onGetAllRecords } from "../../examples/conexion.js";
-import { ManageAccount, auth } from '../../examples/conexion.js';
+import { db } from "./conexion.js";
+import { onGetRecords, getRecord, updateRecord, uploadImage, deleteRecord, onGetAllRecords } from "./conexion.js";
+import { ManageAccount, auth } from './conexion.js';
 
 
 const nav = document.querySelector(".nav"),
